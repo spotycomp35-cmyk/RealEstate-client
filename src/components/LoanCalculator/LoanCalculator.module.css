@@ -1,0 +1,146 @@
+/**
+ * עיצוב לרכיב LoanCalculator
+ */
+
+.calculator {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label {
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.input {
+  padding: var(--spacing-sm);
+  border: 2px solid var(--gray-medium);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.calculateBtn,
+.resetBtn {
+  flex: 1;
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.calculateBtn {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.calculateBtn:hover {
+  background-color: var(--secondary-blue);
+}
+
+.resetBtn {
+  background-color: var(--gray-medium);
+  color: var(--text-dark);
+}
+
+.resetBtn:hover {
+  background-color: var(--gray-dark);
+  color: var(--white);
+}
+
+.results {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  border: 2px solid var(--primary-blue);
+}
+
+.resultsTitle {
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.resultItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.resultItem:last-child {
+  border-bottom: none;
+}
+
+.resultLabel {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.resultValue {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculator {
+    padding: var(--spacing-md);
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .resultItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}
+
